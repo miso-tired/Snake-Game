@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 70vmin;
-    height: 70vmin;
+    height: 80vmin;
     background: #ccc;
     border-radius: 10px;
 }
