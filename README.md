@@ -16,3 +16,10 @@ CodingNepal (2023). How to Create A Snake Game in HTML CSS & JavaScript (v1) [.w
     display: grid;
     grid-template: repeat(25, 1fr) / repeat(25, 1fr);
 }]. https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/
+
+To make a node for the snake to eat and the snake head I used CodingNepal for help again:
+CodingNepal (2023). How to Create A Snake Game in HTML CSS & JavaScript (v1) [const startGame = () => {
+    let htmlMarkup = `<div class="node" style="grid-area: ${nodeY} / ${nodeX}"></div>`;
+    htmlMarkup += `<div class="snake" style="grid-area: ${snakeY} / ${snakeX}"></div>`;
+    grid.innerHTML = htmlMarkup;
+}]. https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/
