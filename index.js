@@ -5,14 +5,20 @@ const randomizeNode = () => {
     nodeY = Math.floor(Math.random() * 25) + 1;
 }
 
+const initiateGameOver = () => {
+    alert("Game Over. Press OK to restart.")
+}
+
 let nodeX, nodeY;
 let snakeX = 5, snakeY = 10;
 let moveX = 0, moveY = 0;
 let body = [];
+let gameOver = false;
 
 
 /* Title: How to Create A Snake Game in HTML CSS & JavaScript * Author:(CodingNepal) * Date: (February, 17, 2023) * Code version:(v1) * Availability: (https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/ */
 const startGame = () => {
+    if(gameOver) return initiateGameOver();
     let htmlMarkup = `<div class="node" style="grid-area: ${nodeY} / ${nodeX}"></div>`;
 
     /* Title: How to Create A Snake Game in HTML CSS & JavaScript * Author:(CodingNepal) * Date: (February, 17, 2023) * Code version:(v1) * Availability: (https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/ */
@@ -29,6 +35,10 @@ const startGame = () => {
 
     snakeX += moveX;
     snakeY += moveY;
+
+    if(snakeX <= 0 || snakeX > 25 || snakeY <= 0 || snakeY > 25) {
+        gameOver = true;
+    }
 
     for (let i = 0; i < body.length; i++) {
         htmlMarkup += `<div class="snake" style="grid-area: ${body[i][1]} / ${body[i][0]}"></div>`;
