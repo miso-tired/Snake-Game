@@ -33,3 +33,10 @@ Needed help extending snake body after each node eaten, used CodingNepal:
 CodingNepal (2023). How to Create A Snake Game in HTML CSS & JavaScript (v1) [for (let i = body.length - 1; i > 0; i--) {
         body[i] = body[i - 1]
     }]. https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/
+
+Used CodingNepal to reload page after pressing "OK" to restart the game:
+CodingNepal (2023). How to Create A Snake Game in HTML CSS & JavaScript (v1) [const initiateGameOver = () => {
+    clearInterval(restartButton);
+    alert("Game Over. Press OK to restart.")
+    location.reload();
+}]. https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/
