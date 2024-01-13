@@ -44,3 +44,10 @@ body {
     grid-template: repeat(25, 1fr) / repeat(25, 1fr);
 }
 
+.grid .snake {
+    background: #6ecc56;
+}
+
+.grid .node {
+    background: #8a0010;
+}
