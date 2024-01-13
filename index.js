@@ -1,4 +1,5 @@
 const grid = document.querySelector(".grid");
+const scoreBoard = document.querySelector(".score-tracker");
 
 const randomizeNode = () => {
     nodeX = Math.floor(Math.random() * 25) + 1;
@@ -15,6 +16,7 @@ let nodeX, nodeY;
 let snakeX = 5, snakeY = 10;
 let moveX = 0, moveY = 0;
 let body = [];
+let score = 0;
 let gameOver = false;
 let restartButton
 
@@ -28,6 +30,8 @@ const startGame = () => {
     if(snakeX === nodeX && snakeY === nodeY) {
         randomizeNode();
         body.push([nodeX, nodeY]);
+        score++
+        scoreBoard.innerText = `Score: ${score}`;
     }
 
     for (let i = body.length - 1; i > 0; i--) {
