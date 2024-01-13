@@ -51,16 +51,16 @@ const startGame = () => {
 }
 
 const moveSnake = (e) => {
-    if(e.key === 'ArrowLeft'){
+    if(e.key === 'ArrowLeft' && moveX != 1){
         moveX = -1;
         moveY = 0;
-    } else if(e.key === 'ArrowRight'){
+    } else if(e.key === 'ArrowRight' && moveX != -1){
         moveX = 1;
         moveY = 0;
-    } else if(e.key === 'ArrowUp'){
+    } else if(e.key === 'ArrowUp' && moveY != 1){
         moveX = 0;
         moveY = -1;
-    } else if(e.key === 'ArrowDown'){
+    } else if(e.key === 'ArrowDown' && moveY != -1){
         moveX = 0;
         moveY = 1;
     }
