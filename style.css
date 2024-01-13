@@ -1,1 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Anton');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e0efe1;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: 'Anton', sans-serif; 
+}
+
+#title {
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 65vw;
+    min-height: 70vh;
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    color: #293447;
+    font-size: 1em;
+    font-weight: 300;
+    padding: 20px 25px;
+}
+
