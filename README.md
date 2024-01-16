@@ -40,3 +40,9 @@ CodingNepal (2023). How to Create A Snake Game in HTML CSS & JavaScript (v1) [co
     alert("Game Over. Press OK to restart.")
     location.reload();
 }]. https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/
+
+CodingNepal demonstrates how to set up a high-score tracker, which collects data from the user's local storage:
+CodingNepal (2023). How to Create A Snake Game in HTML CSS & JavaScript (v1) [recordScore = score >= recordScore ? score : recordScore;
+        highScoreBoard.innerText = `High Score: ${recordScore}`;
+        localStorage.setItem("high-score", recordScore);]. https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/
+
