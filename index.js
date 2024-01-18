@@ -1,5 +1,6 @@
 const grid = document.querySelector(".grid");
 const scoreBoard = document.querySelector(".score-tracker");
+const highScore = document.querySelector(".high-score");
 
 const randomizeNode = () => {
     nodeX = Math.floor(Math.random() * 25) + 1;
@@ -19,7 +20,7 @@ let body = [];
 let score = 0;
 let gameOver = false;
 let restartButton
-
+let record = localStorage.getItem("high-score") || 0;
 
 /* Title: How to Create A Snake Game in HTML CSS & JavaScript * Author:(CodingNepal) * Date: (February, 17, 2023) * Code version:(v1) * Availability: (https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/ */
 const startGame = () => {
@@ -31,7 +32,10 @@ const startGame = () => {
         randomizeNode();
         body.push([nodeX, nodeY]);
         score++
+        highScore = score >= highScore ? score : highScore;
+        localStorage.setItem("high-score", highScore)
         scoreBoard.innerText = `Score: ${score}`;
+        record.innerText = `High-score: ${highScore}`;
     }
 
     for (let i = body.length - 1; i > 0; i--) {
