@@ -1,7 +1,7 @@
 const grid = document.querySelector(".grid");
 const scoreBoard = document.querySelector(".score-tracker");
 const highScoreBoard = document.querySelector(".high-score");
-const highScore = document.querySelector(".high-score");
+
 
 const randomizeNode = () => {
     nodeX = Math.floor(Math.random() * 25) + 1;
@@ -38,10 +38,7 @@ const startGame = () => {
         randomizeNode();
         body.push([nodeX, nodeY]);
         score++
-        highScore = score >= highScore ? score : highScore;
-        localStorage.setItem("high-score", highScore)
         scoreBoard.innerText = `Score: ${score}`;
-        record.innerText = `High-score: ${highScore}`;
 
         recordScore = score >= recordScore ? score : recordScore;
         highScoreBoard.innerText = `High Score: ${recordScore}`;
