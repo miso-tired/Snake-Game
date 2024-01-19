@@ -55,6 +55,7 @@ body {
 
 .grid .snake {
     background: #1e9a20;
+    border-radius: 6px;
     animation: snake-extension 3s linear 2s infinite forwards;
 }
 
@@ -74,4 +75,5 @@ body {
 
 .grid .node {
     background: #8a0010;
+    border-radius: 5px;
 }
