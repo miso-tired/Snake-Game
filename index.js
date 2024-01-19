@@ -59,8 +59,13 @@ const startGame = () => {
     }
 
     for (let i = 0; i < body.length; i++) {
-        htmlMarkup += `<div class="snake" style="grid-area: ${body[i][1]} / ${body[i][0]}"></div>`;
-        if(i !== 0 && body[0][1] === body[i][1] && body[0][0] === body[i][0]) {
+        if (i === 0) {
+            htmlMarkup += `<div class="snake" style="grid-area: ${body[i][1]} / ${body[i][0]}"></div>`;
+        } else {
+            htmlMarkup += `<div class="snake new-section" style="grid-area: ${body[i][1]} / ${body[i][0]}"></div>`;
+        }
+    
+        if (i !== 0 && body[0][1] === body[i][1] && body[0][0] === body[i][0]) {
             gameOver = true;
         }
     }

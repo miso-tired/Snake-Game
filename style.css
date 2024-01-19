@@ -46,6 +46,21 @@ body {
 
 .grid .snake {
     background: #1e9a20;
+    animation: snake-extension 3s linear 2s infinite forwards;
+}
+
+.grid .new-section {
+    background-color: #8a0010;
+    animation: snake-extension 3s linear 2s infinite forwards;
+}
+
+@keyframes snake-extension {
+    from {
+        background-color: #1e9a20;
+    }
+    to{
+        background-color: #8a0010;
+    }
 }
 
 .grid .node {
