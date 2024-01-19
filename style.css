@@ -50,7 +50,7 @@ body {
 }
 
 .grid .new-section {
-    background-color: #8a0010;
+    background-color: #00ffa2;
     animation: snake-extension 3s linear 2s infinite forwards;
 }
 
@@ -59,7 +59,7 @@ body {
         background-color: #1e9a20;
     }
     to{
-        background-color: #8a0010;
+        background-color: #00ffa2;
     }
 }
 

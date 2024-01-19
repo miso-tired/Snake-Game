@@ -15,7 +15,7 @@ const initiateGameOver = () => {
 }
 
 let nodeX, nodeY;
-let snakeX = 5, snakeY = 10;
+let snakeX = 12, snakeY = 7;
 let moveX = 0, moveY = 0;
 let body = [];
 let score = 0;
