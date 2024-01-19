@@ -13,7 +13,16 @@ body {
 }
 
 #title {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+}
+
+.game-description {
+    display: flex;
+    font-size: 0.90em;
+    align-items: center;
+    text-align: center;
+    padding: 0.5em;
+    width: 70vmin;
 }
 
 /* Title: How to Create A Snake Game in HTML CSS & JavaScript * Author:(CodingNepal) * Date: (February, 17, 2023) * Code version:(v1) * Availability: (https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/ */
@@ -21,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 70vmin;
-    height: 80vmin;
+    height: 75vmin;
     background: #ccc;
     border-radius: 10px;
 }
@@ -32,7 +41,7 @@ body {
     color: #293447;
     font-size: 20px;
     font-weight: 300;
-    padding: 1em;
+    padding: 0.5em;
 }
 
 /* Title: How to Create A Snake Game in HTML CSS & JavaScript * Author:(CodingNepal) * Date: (February, 17, 2023) * Code version:(v1) * Availability: (https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/ */
