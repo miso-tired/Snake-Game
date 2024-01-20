@@ -2,12 +2,15 @@ const grid = document.querySelector(".grid");
 const scoreBoard = document.querySelector(".score-tracker");
 const highScoreBoard = document.querySelector(".high-score");
 
-
+//Allows node to spawn in random spots after snake eats them
 const randomizeNode = () => {
     nodeX = Math.floor(Math.random() * 25) + 1;
     nodeY = Math.floor(Math.random() * 25) + 1;
 }
 
+// Restart and Game Over Functions
+let restartButton
+let gameOver = false;
 const initiateGameOver = () => {
     clearInterval(restartButton);
     alert("Game Over. Press OK to restart.")
@@ -16,13 +19,11 @@ const initiateGameOver = () => {
 
 let nodeX, nodeY;
 let snakeX = 12, snakeY = 7;
-let moveX = 0, moveY = 0;
+let moveLeftRight = 0, moveUpDown = 0;
 let body = [];
-let score = 0;
-let gameOver = false;
-let restartButton
 
 // High score functions
+let score = 0;
 let recordScore = localStorage.getItem("high-score") || 0;
 highScoreBoard.innerText = `High Score: ${recordScore}`;
 
@@ -51,8 +52,8 @@ const startGame = () => {
 
     body[0] = [snakeX, snakeY]
 
-    snakeX += moveX;
-    snakeY += moveY;
+    snakeX += moveLeftRight;
+    snakeY += moveUpDown;
 
     if(snakeX <= 0 || snakeX > 25 || snakeY <= 0 || snakeY > 25) {
         gameOver = true;
@@ -74,20 +75,11 @@ const startGame = () => {
 }
 
 const moveSnake = (e) => {
-    if(e.key === 'ArrowLeft' && moveX != 1){
-        moveX = -1;
-        moveY = 0;
-    } else if(e.key === 'ArrowRight' && moveX != -1){
-        moveX = 1;
-        moveY = 0;
-    } else if(e.key === 'ArrowUp' && moveY != 1){
-        moveX = 0;
-        moveY = -1;
-    } else if(e.key === 'ArrowDown' && moveY != -1){
-        moveX = 0;
-        moveY = 1;
+    const directions = { 'ArrowLeft': [-1, 0], 'ArrowRight': [1, 0], 'ArrowUp': [0, -1], 'ArrowDown': [0, 1] };
+    if (directions[e.key] && (directions[e.key][0] !== -moveLeftRight || directions[e.key][1] !== -moveUpDown)) {
+        [moveLeftRight, moveUpDown] = directions[e.key];
+        startGame();
     }
-    startGame()
 }
 
 randomizeNode()
