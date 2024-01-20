@@ -77,3 +77,10 @@ body {
     background: #8a0010;
     border-radius: 5px;
 }
+
+.grid .snake,
+.grid .new-section {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    animation: snake-extension 3s linear 2s infinite forwards;
+}
